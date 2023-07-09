@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+}
+@font-face {
+    font-family: 'Gunny Rewritten';
+    src: local('Gunny Rewritten'), local('GunnyRewritten'), url('fonts/gunnyrewritten.woff2') format('woff2'), url('fonts/gunnyrewritten.woff') format('woff'), url('fonts/gunnyrewritten.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gagalin';
+    src: local('Gagalin'), local('Gagalin-Regular'), url('fonts/Gagalin.woff2') format('woff2'), url('fonts/Gagalin.woff') format('woff'), url('fonts/Gagalin.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 24px;
+    color:rgb(28, 27, 21);
+    letter-spacing: 0.3em;
+    font-weight: 300;
+    font-family: Gagalin, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+
+}
+.yellow-line {
+    box-sizing:border-box;
+    border-bottom-style: ridge;
+    height: 100px;
+    background-image: url(images/free-car-maintenance-icons-vector.png);
+    background-size: 100px;
+    background-color: rgba(255, 230, 0, 0.857);
+    display: flex;
+}
+.header-title {
+    margin: auto 0 auto 20px;
+    text-shadow: 15px 10px 5px rgb(0, 0, 0, 0.3), 0px 0px 5px rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+}
+.navigation {
+    display: block;
+    height: 75px;
+    width: 100%;
+    background-color: rgba(0, 166, 255, 0.326);
+}
+.nav-glass {
+    display: flex;
+    justify-content: start;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.157);
+}
+.nav-block {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+}
+.nav-block-first {
+    margin-left: 10px;
+}
+.nav-block-title {
+    text-shadow: 15px 10px 5px rgb(0, 0, 0, 0.3), 0px 0px 5px rgb(0, 0, 0);
+    font-size: 30px;
+    color:rgba(255, 230, 5, 0.857);
+    text-align: center;
+}
+.nav-block-img {
+    height: 30px;
+    box-sizing: content-box;
+    padding: 15%;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 5px;
+}
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    height: 800px;
+    width: 100%px;
+    background-color: rgba(0, 166, 255, 0.326);
+    background-image: url(images/1653104085_37-celes-club-p-fon-avtomasterskaya-krasivie-38.jpg);
+    background-size: cover;
+    border-top: 3px ridge rgba(0, 0, 0, 0.568);
+    flex-wrap: wrap;
+}
+.section-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+    margin-top: auto;
+    height: 200px;
+    width: 20.1%;
+    border: 2px solid black;
+    background-color: rgba(56, 90, 73, 0.77);
+    box-shadow: 5px 5px 3px rgba(50, 89, 168, 0.722);
+}
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.section-box-img {
+    height: 75px;
+    margin: 10px auto 0 auto;
+}
+.section-box-fill {
+    margin: auto;
+    font-family: Gagalin;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+.footer {
+    display: block;
+    text-align: center;
+}
