@@ -2,9 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-body {
 }
 @font-face {
     font-family: 'Gunny Rewritten';
@@ -18,55 +15,80 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'PT Mono';
+    src: local('PT Mono'), local('PTMono-Regular'), url('fonts/ptmono.woff2') format('woff2'), url('fonts/ptmono.woff') format('woff'), url('fonts/ptmono.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    width: 1300px;
+    min-width: 1300px;
+    background-color: aqua;
+}
 h1 {
     font-size: 24px;
     color:rgb(28, 27, 21);
-    letter-spacing: 0.3em;
-    font-weight: 300;
-    font-family: Gagalin, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.25em;
+    font-weight: 800;
+    font-family: PT Mono;
     text-transform: uppercase;
 }
 h2 {
     font-size: 16px;
     text-transform: uppercase;
+    font-family: PT Mono;
+    font-weight: 800;
 
 }
 .yellow-line {
     box-sizing:border-box;
-    border-bottom-style: ridge;
-    height: 100px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    height: 25px;
     background-image: url(images/free-car-maintenance-icons-vector.png);
     background-size: 100px;
     background-color: rgba(255, 230, 0, 0.857);
-    display: flex;
+    display: block;
+    width: 1140px;
+    margin: 0 auto;
 }
 .header-title {
     margin: auto 0 auto 20px;
     text-shadow: 15px 10px 5px rgb(0, 0, 0, 0.3), 0px 0px 5px rgb(0, 0, 0);
     color:rgb(255, 255, 255);
 }
+.main-section {
+    background-image: url(images/1674277452_catherineasquithgallery-com-p-serii-fon-avtoservis-foto-27.jpg);
+    background-size: cover;
+    width: 1140px;
+    display: block;
+    margin: 0 auto;
+}
 .navigation {
     display: block;
+    justify-content: space-evenly;
     height: 75px;
     width: 100%;
-    background-color: rgba(0, 166, 255, 0.326);
 }
 .nav-glass {
     display: flex;
-    justify-content: start;
+    justify-content:space-evenly;
+    align-content:space-evenly;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.157);
+    background-color: rgba(255, 221, 0, 0.19);
+    box-shadow: 0px 5px 32px black;
+    backdrop-filter: blur(5px);
 }
 .nav-block {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 10px;
+    display: flex;
+    min-width: calc(100%/3);
+    align-items: center;
+    background-color: rgba(93, 103, 103, 0);
+    justify-content: space-evenly;
 }
-.nav-block-first {
-    margin-left: 10px;
-}
+
 .nav-block-title {
     text-shadow: 15px 10px 5px rgb(0, 0, 0, 0.3), 0px 0px 5px rgb(0, 0, 0);
     font-size: 30px;
@@ -76,33 +98,61 @@ h2 {
 .nav-block-img {
     height: 30px;
     box-sizing: content-box;
-    padding: 15%;
-    box-shadow: 0px 0px 10px black;
+    padding: 0 5px;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
     border-radius: 5px;
+    transition: 0.2s;
 }
-.section {
+.nav-block-img:hover {
+transform: scale(1.1);
+}
+.nav-block-button {
+    height: 50px;
+    width: 80px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(21, 0, 255, 0);
+    box-shadow: 0px 0px 8px black;
+    font-weight: 400;
+    font-family: PT Mono;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    user-select: none;
+    padding: auto auto;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s;
+} 
+.nav-block-button:hover {
+    transform: scale(1.1);
+}
+.container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: space-evenly;
-    height: 800px;
+    height: 617px;
     width: 100%px;
-    background-color: rgba(0, 166, 255, 0.326);
-    background-image: url(images/1653104085_37-celes-club-p-fon-avtomasterskaya-krasivie-38.jpg);
-    background-size: cover;
-    border-top: 3px ridge rgba(0, 0, 0, 0.568);
+    min-width: 1140px;
+    background-color: rgba(255, 221, 0, 0.13);
     flex-wrap: wrap;
 }
-.section-box {
+.container-box {
     display: flex;
     flex-direction: column;
     border-radius: 10%;
     margin-top: auto;
     height: 200px;
     width: 20.1%;
+    user-select: none;
     border: 2px solid black;
-    background-color: rgba(56, 90, 73, 0.77);
+    background-color: rgb(255, 255, 255);
     box-shadow: 5px 5px 3px rgba(50, 89, 168, 0.722);
+    transition: 0.2s;
+}
+.container-box:hover {
+    transform: scale(1.1);
 }
 .glass{
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -110,18 +160,27 @@ h2 {
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 0px 32px 0 rgba(0, 0, 0, 0.6);
 }
-.section-box-img {
+.container-box-img {
     height: 75px;
     margin: 10px auto 0 auto;
 }
-.section-box-fill {
+.container-box-fill {
     margin: auto;
-    font-family: Gagalin;
-    font-weight: 300;
+    font-family: PT Mono;
+    font-weight: 800;
     font-size: 20px;
     text-align: center;
+}
+.author {
+    text-align: center;
+    display: block;
+    margin-bottom: 0;
+    background-color: rgba(229, 255, 0, 0.159);
+    box-shadow: 0px -5px 32px black;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
 }
 .footer {
     display: block;
