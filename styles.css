@@ -3,186 +3,323 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 1rem;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-ExtraLight.woff2') format('woff2') url('fonts/Manrope-ExtraLight.woff') format('woff');
+    font-weight: 1;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-ExtraLight.woff2') format('woff2') url('fonts/Manrope-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-Light.woff2') format('woff2') url('fonts/Manrope-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-Regular.woff2') format('woff2') url('fonts/Manrope-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-Medium.woff2') format('woff2') url('fonts/Manrope-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-SemiBold.woff2') format('woff2') url('fonts/Manrope-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-Bold.woff2') format('woff2') url('fonts/Manrope-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-ExtraBold.woff2') format('woff2') url('fonts/Manrope-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Mono One';
+    src: local('Rubik Mono One Regular'), local('RubikMonoOne-Regular'), url('fonts/rubikmonooneregular.woff2') format('woff2'), url('fonts/rubikmonooneregular.woff') format('woff'), url('fonts/rubikmonooneregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'Gunny Rewritten';
     src: local('Gunny Rewritten'), local('GunnyRewritten'), url('fonts/gunnyrewritten.woff2') format('woff2'), url('fonts/gunnyrewritten.woff') format('woff'), url('fonts/gunnyrewritten.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Gagalin';
     src: local('Gagalin'), local('Gagalin-Regular'), url('fonts/Gagalin.woff2') format('woff2'), url('fonts/Gagalin.woff') format('woff'), url('fonts/Gagalin.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'PT Mono';
     src: local('PT Mono'), local('PTMono-Regular'), url('fonts/ptmono.woff2') format('woff2'), url('fonts/ptmono.woff') format('woff'), url('fonts/ptmono.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
+
 body {
-    width: 1300px;
-    min-width: 1300px;
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.15);
+    background-image: url(images/1674277452_catherineasquithgallery-com-p-serii-fon-avtoservis-foto-27.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 100vw;
+    min-width: 320px;
+    min-height: 1000px;
 }
+
 h1 {
-    font-size: 24px;
-    color:rgb(28, 27, 21);
-    letter-spacing: 0.25em;
+    font-size: 1.5rem;
+    color: rgb(28, 27, 21);
+    letter-spacing: 0.15rem;
     font-weight: 800;
     font-family: PT Mono;
     text-transform: uppercase;
 }
+
 h2 {
-    font-size: 16px;
+    font-size: 0.8rem;
     text-transform: uppercase;
     font-family: PT Mono;
     font-weight: 800;
 
 }
-.yellow-line {
-    box-sizing:border-box;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    height: 25px;
-    background-image: url(images/free-car-maintenance-icons-vector.png);
-    background-size: 100px;
-    background-color: rgba(255, 230, 0, 0.857);
-    display: block;
-    width: 1140px;
-    margin: 0 auto;
-}
-.header-title {
-    margin: auto 0 auto 20px;
-    text-shadow: 15px 10px 5px rgb(0, 0, 0, 0.3), 0px 0px 5px rgb(0, 0, 0);
-    color:rgb(255, 255, 255);
-}
-.main-section {
-    background-image: url(images/1674277452_catherineasquithgallery-com-p-serii-fon-avtoservis-foto-27.jpg);
-    background-size: cover;
-    width: 1140px;
-    display: block;
-    margin: 0 auto;
-}
+
 .navigation {
     display: block;
-    justify-content: space-evenly;
-    height: 75px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 7vh;
     width: 100%;
+    backdrop-filter: blur(4px);
 }
+
 .nav-glass {
     display: flex;
-    justify-content:space-evenly;
-    align-content:space-evenly;
-    height: 100%;
+    position: relative;
+    height: 7vh;
     width: 100%;
-    background-color: rgba(255, 221, 0, 0.19);
-    box-shadow: 0px 5px 32px black;
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.767);
+    box-shadow: 0px 1px 2rem rgba(0, 0, 0, 0.481);
 }
+
 .nav-block {
     display: flex;
-    min-width: calc(100%/3);
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgba(93, 103, 103, 0);
-    justify-content: space-evenly;
+}
+
+.nav-block li {
+    display: flex;
 }
 
 .nav-block-title {
-    text-shadow: 15px 10px 5px rgb(0, 0, 0, 0.3), 0px 0px 5px rgb(0, 0, 0);
-    font-size: 30px;
-    color:rgba(255, 230, 5, 0.857);
-    text-align: center;
+    display: flex;
+    flex-grow: 7;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.857);
 }
-.nav-block-img {
-    height: 30px;
-    box-sizing: content-box;
-    padding: 0 5px;
-    box-shadow: 0px 0px 8px rgb(0, 0, 0);
-    border-radius: 5px;
-    transition: 0.2s;
-}
-.nav-block-img:hover {
-transform: scale(1.1);
-}
+
 .nav-block-button {
-    height: 50px;
-    width: 80px;
-    color: rgb(255, 255, 255);
-    background-color: rgba(21, 0, 255, 0);
-    box-shadow: 0px 0px 8px black;
-    font-weight: 400;
-    font-family: PT Mono;
-    font-size: 16px;
-    text-decoration: none;
-    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.857);
     user-select: none;
-    padding: auto auto;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    transition: 0.2s;
-} 
-.nav-block-button:hover {
-    transform: scale(1.1);
+    background-color: none;
+    transition: 0.4s;
 }
+
+.nav-block-button-text {
+    transition: 0.4s;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-family: PT Mono;
+    font-size: 1rem;
+}
+
+.nav-block-button-separator {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-block-button-separator h2 {
+    display: flex;
+    user-select: none;
+    font-family: Manrope;
+    font-size: 1.8rem;
+}
+
+.nav-block-button:hover {
+    background-color: rgba(159, 159, 159, 0.4);
+}
+
+.nav-block-etc:hover {
+    background-color: rgba(159, 159, 159, 0.4);
+}
+
+.nav-block-etc {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+.nav-block-etc-text {
+    font-size: 2rem;
+    user-select: none;
+    transition: 0.4s;
+}
+
 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: space-evenly;
-    height: 617px;
-    width: 100%px;
-    min-width: 1140px;
-    background-color: rgba(255, 221, 0, 0.13);
+    min-height: 54%;
+    width: 100%;
     flex-wrap: wrap;
+    margin-top: 7vh;
 }
+
 .container-box {
     display: flex;
+    width: 18vw;
+    height: 18vw;
     flex-direction: column;
-    border-radius: 10%;
-    margin-top: auto;
-    height: 200px;
-    width: 20.1%;
     user-select: none;
     border: 2px solid black;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 5px 3px rgba(50, 89, 168, 0.722);
+    box-shadow: 0.1rem 0.1rem 5.05rem rgb(50, 89, 168);
     transition: 0.2s;
+    margin: 8vh 2vw;
 }
+
 .container-box:hover {
     transform: scale(1.1);
 }
-.glass{
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+
+.glass {
+    background-color: rgba(255, 255, 255, 0.267);    
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 0px 32px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0.1rem 0.1rem 0.03rem rgba(0, 0, 0, 0.411);
 }
+
 .container-box-img {
-    height: 75px;
-    margin: 10px auto 0 auto;
+    max-height: 40%;
+    margin: 10% auto;
 }
+
 .container-box-fill {
-    margin: auto;
-    font-family: PT Mono;
+    display: flex;
+    flex-grow: 15555;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.1rem;
+    font-family: Manrope;
     font-weight: 800;
-    font-size: 20px;
     text-align: center;
 }
-.author {
-    text-align: center;
+
+.footer-wrap {
     display: block;
-    margin-bottom: 0;
-    background-color: rgba(229, 255, 0, 0.159);
-    box-shadow: 0px -5px 32px black;
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
+    width: 100%;
+    margin-top: auto;
 }
+
 .footer {
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px -5px 2rem rgba(0, 0, 0, 0.641);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+}
+
+.author {
+    font-weight: 300;
+    font-size: 0.8rem;
+    letter-spacing: 0.4rem;
     display: block;
-    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 960px) {
+    html {
+        font-size: 0.8rem;
+    }
+    .navigation {
+        position: fixed;
+    }
+    li.nav-block-title {
+        display: none;
+    }
+    li.nav-block-button:nth-child(6) {
+        display: none;
+    }
+    li.nav-block-button-separator:nth-child(7) {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .container-box {
+        margin: 4vh 10vw;
+        width: 30vw;
+        height: 30vw;
+    }
+    .navigation {
+        position: fixed;
+    }
 }
