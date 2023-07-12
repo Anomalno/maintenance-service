@@ -152,6 +152,25 @@ h2 {
     display: flex;
 }
 
+nav ul li ul.nav-block-2 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 1rem 1rem;
+    padding: 1rem;
+    position:fixed;
+    top: 80%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out 0s, top 0.3s ease-in-out 0s;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.767);
+    box-shadow: 0px 1px 2rem rgba(0, 0, 0, 0.481);
+}
+
+nav ul li:hover>ul.nav-block-2 {
+    opacity: 1;
+    top: 100%;
+}
+
 .nav-block-title {
     display: flex;
     flex-grow: 7;
@@ -169,6 +188,7 @@ h2 {
     user-select: none;
     background-color: none;
     transition: 0.4s;
+    background-color: aqua;
 }
 
 .nav-block-button-text {
@@ -244,7 +264,7 @@ h2 {
 }
 
 .glass {
-    background-color: rgba(255, 255, 255, 0.267);    
+    background-color: rgba(255, 255, 255, 0.267);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 10%;
@@ -299,15 +319,19 @@ h2 {
     html {
         font-size: 0.8rem;
     }
+
     .navigation {
         position: fixed;
     }
+
     li.nav-block-title {
         display: none;
     }
+
     li.nav-block-button:nth-child(6) {
         display: none;
     }
+
     li.nav-block-button-separator:nth-child(7) {
         display: none;
     }
@@ -319,6 +343,7 @@ h2 {
         width: 30vw;
         height: 30vw;
     }
+
     .navigation {
         position: fixed;
     }
