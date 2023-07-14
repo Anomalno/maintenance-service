@@ -9,85 +9,8 @@ html {
 }
 
 @font-face {
-    font-family: 'Manrope';
-    src: url('fonts/Manrope-ExtraLight.woff2') format('woff2') url('fonts/Manrope-ExtraLight.woff') format('woff');
-    font-weight: 1;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Manrope';
-    src: url('fonts/Manrope-ExtraLight.woff2') format('woff2') url('fonts/Manrope-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Manrope';
-    src: url('fonts/Manrope-Light.woff2') format('woff2') url('fonts/Manrope-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Manrope';
-    src: url('fonts/Manrope-Regular.woff2') format('woff2') url('fonts/Manrope-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Manrope';
-    src: url('fonts/Manrope-Medium.woff2') format('woff2') url('fonts/Manrope-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Manrope';
-    src: url('fonts/Manrope-SemiBold.woff2') format('woff2') url('fonts/Manrope-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Manrope';
-    src: url('fonts/Manrope-Bold.woff2') format('woff2') url('fonts/Manrope-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Manrope';
-    src: url('fonts/Manrope-ExtraBold.woff2') format('woff2') url('fonts/Manrope-ExtraBold.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Rubik Mono One';
-    src: local('Rubik Mono One Regular'), local('RubikMonoOne-Regular'), url('fonts/rubikmonooneregular.woff2') format('woff2'), url('fonts/rubikmonooneregular.woff') format('woff'), url('fonts/rubikmonooneregular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gunny Rewritten';
-    src: local('Gunny Rewritten'), local('GunnyRewritten'), url('fonts/gunnyrewritten.woff2') format('woff2'), url('fonts/gunnyrewritten.woff') format('woff'), url('fonts/gunnyrewritten.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gagalin';
-    src: local('Gagalin'), local('Gagalin-Regular'), url('fonts/Gagalin.woff2') format('woff2'), url('fonts/Gagalin.woff') format('woff'), url('fonts/Gagalin.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'PT Mono';
-    src: local('PT Mono'), local('PTMono-Regular'), url('fonts/ptmono.woff2') format('woff2'), url('fonts/ptmono.woff') format('woff'), url('fonts/ptmono.ttf') format('truetype');
+    src: local('PT Mono'), url('fonts/ptmono.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
@@ -95,20 +18,21 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.15);
     background-image: url(images/1674277452_catherineasquithgallery-com-p-serii-fon-avtoservis-foto-27.jpg);
     background-size: cover;
     background-blend-mode: multiply;
     width: 100vw;
     min-width: 320px;
-    min-height: 1000px;
+    max-width: 100vw;
 }
 
 h1 {
     font-size: 1.5rem;
     color: rgb(28, 27, 21);
     letter-spacing: 0.15rem;
-    font-weight: 800;
+    font-weight: 600;
     font-family: PT Mono;
     text-transform: uppercase;
 }
@@ -131,32 +55,26 @@ h2 {
     backdrop-filter: blur(4px);
 }
 
-.nav-glass {
+.nav-block-1 {
     display: flex;
+    justify-content: space-between;
     position: relative;
     height: 7vh;
-    width: 100%;
+    max-width: 100%;
     background-color: rgba(255, 255, 255, 0.767);
     box-shadow: 0px 1px 2rem rgba(0, 0, 0, 0.481);
 }
 
-.nav-block {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-block li {
+.nav-block-1 li {
     display: flex;
 }
 
-nav ul li ul.nav-block-2 {
+.nav-block-2 {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
     border-radius: 0 0 1rem 1rem;
-    padding: 1rem;
     position:fixed;
     top: 80%;
     opacity: 0;
@@ -166,20 +84,19 @@ nav ul li ul.nav-block-2 {
     box-shadow: 0px 1px 2rem rgba(0, 0, 0, 0.481);
 }
 
-nav ul li:hover>ul.nav-block-2 {
+ header ul li:hover>ul.nav-block-2 {
     opacity: 1;
     top: 100%;
 }
 
 .nav-block-title {
-    display: flex;
     flex-grow: 7;
     justify-content: center;
+    align-items: center;
     color: rgba(0, 0, 0, 0.857);
 }
 
 .nav-block-button {
-    display: flex;
     flex-grow: 1;
     justify-content: center;
     align-items: center;
@@ -188,7 +105,7 @@ nav ul li:hover>ul.nav-block-2 {
     user-select: none;
     background-color: none;
     transition: 0.4s;
-    background-color: aqua;
+
 }
 
 .nav-block-button-text {
@@ -197,10 +114,10 @@ nav ul li:hover>ul.nav-block-2 {
     letter-spacing: 0.1rem;
     font-family: PT Mono;
     font-size: 1rem;
+    background-color: azure;
 }
 
 .nav-block-button-separator {
-    display: flex;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -222,7 +139,6 @@ nav ul li:hover>ul.nav-block-2 {
 }
 
 .nav-block-etc {
-    display: flex;
     height: 100%;
     align-items: center;
     flex-grow: 1;
@@ -238,25 +154,28 @@ nav ul li:hover>ul.nav-block-2 {
 
 .container {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
     justify-content: space-evenly;
-    align-content: space-evenly;
-    min-height: 54%;
-    width: 100%;
+    min-height: calc(93vh - 2rem);
+    width: 80%;
+    max-width: 80%;
     flex-wrap: wrap;
     margin-top: 7vh;
 }
 
 .container-box {
     display: flex;
-    width: 18vw;
-    height: 18vw;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 16vw;
+    height: 16vw;
     user-select: none;
     border: 2px solid black;
     box-shadow: 0.1rem 0.1rem 5.05rem rgb(50, 89, 168);
     transition: 0.2s;
-    margin: 8vh 2vw;
+    margin: 2vh 2vw;
 }
 
 .container-box:hover {
@@ -266,25 +185,34 @@ nav ul li:hover>ul.nav-block-2 {
 .glass {
     background-color: rgba(255, 255, 255, 0.267);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-radius: 10%;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 0px 32px 0 rgba(0, 0, 0, 0.6);
     box-shadow: 0.1rem 0.1rem 0.03rem rgba(0, 0, 0, 0.411);
 }
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vw;
+    margin-top: 2vw;
 
+}
 .container-box-img {
-    max-height: 40%;
-    margin: 10% auto;
+    border-bottom: 0.1rem solid black;
+    border-radius: 0.5rem;
+    max-width: 75%;
+    max-height: 100%;
+
 }
 
 .container-box-fill {
     display: flex;
-    flex-grow: 15555;
+    height: 8vw;
     align-items: center;
     justify-content: center;
-    padding: 0 1.1rem;
-    font-family: Manrope;
+    font-family: PT Mono;
     font-weight: 800;
     text-align: center;
 }
@@ -298,6 +226,7 @@ nav ul li:hover>ul.nav-block-2 {
 .footer {
     display: flex;
     height: 2rem;
+    width: 100%;
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
@@ -320,10 +249,6 @@ nav ul li:hover>ul.nav-block-2 {
         font-size: 0.8rem;
     }
 
-    .navigation {
-        position: fixed;
-    }
-
     li.nav-block-title {
         display: none;
     }
@@ -339,12 +264,15 @@ nav ul li:hover>ul.nav-block-2 {
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
     .container-box {
-        margin: 4vh 10vw;
-        width: 30vw;
-        height: 30vw;
+        width: 20vw;
+        height: 20vw;
     }
 
     .navigation {
         position: fixed;
+    }
+    .nav-block-2 {
+        left: 0%;
+        width: 100vw;
     }
 }
